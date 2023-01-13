@@ -1,34 +1,25 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+To open the project:
 
-## Getting Started
+- Clone the respository.
+- After opening it in the code editor run:
+  - npm install
+  - npm run dev
+- Go to your favorite browser and search localhost:3000, where the Next.js applciation will be displayed.
 
-First, run the development server:
+To create and run next js applications with a typescript template:
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+- npx create-next-app@latest --ts app-name
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+To create and run Next.js applciation with typescript template and tailwind:
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- npx create-next-app -e with-tailwindcss
+  app-name
+  \*\* It would be nice to run all tailwind application with a storybook setup.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Application Setup:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- `public` folder is the most important one. Everything created in there will be transformed on a route to navigate through the application pages. (e.x: localhost:3000/favicon.ico). This is a major benefit because there is no need to create routing navigation which makes it easier to develop and avoids extra repeated code.
 
-## Learn More
+- `styles` folder holds all the application styles. The naming convetion to import different styling sheets for each component should be represented as follows: `AComponentName.module.css`, where `module.css` is key to know the styling sheet throughout the entire application.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- `components` folder holds all the applcation components that do not need any routing.
